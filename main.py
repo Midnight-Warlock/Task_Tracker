@@ -13,6 +13,7 @@ class TodoApp(QMainWindow):
 
         self.setWindowTitle("Task Tracker App")
         self.setFixedSize(600, 600)
+        self.setStyleSheet("QMainWindow { background-color: #D3D3D3; }")
 
         # Task times dictionary
         self.task_times = {}
