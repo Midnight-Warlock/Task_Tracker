@@ -3,8 +3,8 @@ import os.path
 import csv
 from datetime import datetime, timedelta
 from PyQt6.QtCore import Qt, QTimer, QDateTime
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QTextEdit, QPushButton, QVBoxLayout, QHBoxLayout, QGridLayout, QTreeView, QWidget, QMessageBox, QDialog
-from PyQt6.QtGui import QStandardItemModel, QStandardItem
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QTextEdit, QPushButton, QVBoxLayout, QHBoxLayout, QGridLayout, QTreeView, QWidget, QMessageBox, QDialog, QSystemTrayIcon
+from PyQt6.QtGui import QStandardItemModel, QStandardItem, QIcon
 
 
 class TodoApp(QMainWindow):
@@ -200,6 +200,10 @@ class TodoApp(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    app_icon = QIcon('icons8-check-64.png')
+    app.setWindowIcon(app_icon)
+    tray_icon = QSystemTrayIcon(app_icon, app)
+    tray_icon.show()
     window = TodoApp()
     window.show()
     sys.exit(app.exec())
