@@ -200,7 +200,7 @@ class TodoApp(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app_icon = QIcon('icons8-check-64.png')
+    app_icon = QIcon('icons8-check-64.ico')
     app.setWindowIcon(app_icon)
     tray_icon = QSystemTrayIcon(app_icon, app)
     tray_icon.show()
